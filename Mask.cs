@@ -84,7 +84,7 @@ namespace PunkX
         /// <summary>
         /// Updates the parent's bounds for this mask.
         /// </summary>
-        protected void update()
+        public virtual void update()
         {
         }
 

@@ -15,7 +15,7 @@ namespace PunkX
         /// <summary>
         /// Point used to determine drawing offset in the render loop.
         /// </summary>
-        public Microsoft.Xna.Framework.Point camera = new Microsoft.Xna.Framework.Point();
+        public Microsoft.Xna.Framework.Vector2 camera = new Microsoft.Xna.Framework.Vector2();
 
         // Adding and removal.
         private List<Entity> _add = new List<Entity>();
@@ -114,7 +114,7 @@ namespace PunkX
         /// </summary>
         public int mouseX
         {
-            get { return PX.screen.mouseX + PX.camera.X; }
+            get { return (int)(PX.screen.mouseX + PX.camera.X); }
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace PunkX
         /// </summary>
         public int mouseY
         {
-            get { return PX.screen.mouseY + PX.camera.Y; }
+            get { return (int)(PX.screen.mouseY + PX.camera.Y); }
         }
 		
         /// <summary>
@@ -1286,7 +1286,8 @@ namespace PunkX
 			{
 				if (_layerList.Count > 1) 
                 {
-                    PX.sort(_layerList, true);
+                    //PX.sort(_layerList, true);
+                    _layerList.Sort();
                 }
 				_layerSort = false;
 			}

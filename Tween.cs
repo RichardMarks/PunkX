@@ -18,17 +18,17 @@ namespace PunkX
         /// <summary>
         /// persistent tween type - stops when the tween is finished
         /// </summary>
-        static public const uint PERSIST = 0;
+        public const uint PERSIST = 0;
 
         /// <summary>
         /// looping tween type - restarts immediate when the tween is finished
         /// </summary>
-        static public const uint LOOPING = 1;
+        public const uint LOOPING = 1;
 
         /// <summary>
         /// single-use tween type - stops and removes itself from core container when the tween is finished
         /// </summary>
-        static public const uint ONESHOT = 2;
+        public const uint ONESHOT = 2;
 
         /// <summary>
         /// if the tween should update

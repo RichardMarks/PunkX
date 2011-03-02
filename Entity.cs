@@ -8,7 +8,7 @@ namespace PunkX
     /// <summary>
     /// Main game Entity class updated by World.
     /// </summary>
-    public class Entity : Tweener
+    public class Entity : Tweener, glue.IPosition
     {
         /// <summary>
         /// If the Entity should render.
@@ -28,12 +28,22 @@ namespace PunkX
         /// <summary>
         /// X position of the Entity in the World.
         /// </summary>
-        public float x = 0;
+        //public float x = 0;
+        public float x
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Y position of the Entity in the World.
         /// </summary>
-        public float y = 0;
+        //public float y = 0;
+        public float y
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Width of the Entity's hitbox.
@@ -582,7 +592,7 @@ namespace PunkX
         /// <param name="rwidth">Width of the rectangle.</param>
         /// <param name="rheight">Height of the rectangle.</param>
         /// <returns>The distance.</returns>
-        public float distanceToRect(float rx, float ry, float rwidth, float rheight)
+        public float distanceToRect(float rx, float ry, int rwidth, int rheight)
         {
             return PX.distanceRects(rx, ry, rwidth, rheight, x - originX, y - originY, width, height);
         }
@@ -595,6 +605,9 @@ namespace PunkX
         {
             return this.GetType().FullName;
         }
+
+
+
 
 
     }

@@ -144,10 +144,10 @@ namespace PunkX.masks
         /// <summary>
         /// Updates the parent's bounds for this mask.
         /// </summary>
-        override protected void update()
+        override public void update()
         {
             // update parent list
-			if (list) 
+			if (list != null) 
 			{
 				list.update();
 			}

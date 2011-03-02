@@ -36,7 +36,7 @@ namespace PunkX
         /// <summary>
         /// Updates the Tween container.
         /// </summary>
-        public void update()
+        public virtual void update()
         {
         }
 
